@@ -1,0 +1,13 @@
+C:\Users\Ingrid Coda\Desktop\Desafio\payments-information-api\PaymentsInformationAPI\PaymentsInformationAPI\bin\Debug\netcoreapp2.1\PaymentsInformationAPI.deps.json
+C:\Users\Ingrid Coda\Desktop\Desafio\payments-information-api\PaymentsInformationAPI\PaymentsInformationAPI\bin\Debug\netcoreapp2.1\PaymentsInformationAPI.runtimeconfig.json
+C:\Users\Ingrid Coda\Desktop\Desafio\payments-information-api\PaymentsInformationAPI\PaymentsInformationAPI\bin\Debug\netcoreapp2.1\PaymentsInformationAPI.runtimeconfig.dev.json
+C:\Users\Ingrid Coda\Desktop\Desafio\payments-information-api\PaymentsInformationAPI\PaymentsInformationAPI\bin\Debug\netcoreapp2.1\PaymentsInformationAPI.dll
+C:\Users\Ingrid Coda\Desktop\Desafio\payments-information-api\PaymentsInformationAPI\PaymentsInformationAPI\bin\Debug\netcoreapp2.1\PaymentsInformationAPI.pdb
+C:\Users\Ingrid Coda\Desktop\Desafio\payments-information-api\PaymentsInformationAPI\PaymentsInformationAPI\obj\Debug\netcoreapp2.1\PaymentsInformationAPI.csproj.CoreCompileInputs.cache
+C:\Users\Ingrid Coda\Desktop\Desafio\payments-information-api\PaymentsInformationAPI\PaymentsInformationAPI\obj\Debug\netcoreapp2.1\PaymentsInformationAPI.RazorAssemblyInfo.cache
+C:\Users\Ingrid Coda\Desktop\Desafio\payments-information-api\PaymentsInformationAPI\PaymentsInformationAPI\obj\Debug\netcoreapp2.1\PaymentsInformationAPI.RazorAssemblyInfo.cs
+C:\Users\Ingrid Coda\Desktop\Desafio\payments-information-api\PaymentsInformationAPI\PaymentsInformationAPI\obj\Debug\netcoreapp2.1\PaymentsInformationAPI.AssemblyInfoInputs.cache
+C:\Users\Ingrid Coda\Desktop\Desafio\payments-information-api\PaymentsInformationAPI\PaymentsInformationAPI\obj\Debug\netcoreapp2.1\PaymentsInformationAPI.AssemblyInfo.cs
+C:\Users\Ingrid Coda\Desktop\Desafio\payments-information-api\PaymentsInformationAPI\PaymentsInformationAPI\obj\Debug\netcoreapp2.1\PaymentsInformationAPI.RazorTargetAssemblyInfo.cache
+C:\Users\Ingrid Coda\Desktop\Desafio\payments-information-api\PaymentsInformationAPI\PaymentsInformationAPI\obj\Debug\netcoreapp2.1\PaymentsInformationAPI.dll
+C:\Users\Ingrid Coda\Desktop\Desafio\payments-information-api\PaymentsInformationAPI\PaymentsInformationAPI\obj\Debug\netcoreapp2.1\PaymentsInformationAPI.pdb
