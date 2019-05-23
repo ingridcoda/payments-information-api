@@ -10,6 +10,6 @@
     public enum Bandeira
     {
         Visa,
-        Mastercard
+        Master
     }
 }

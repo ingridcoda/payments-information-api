@@ -1,20 +1,30 @@
-﻿using LightInject;
-using PaymentsInformationAPI.Domain;
+﻿using PaymentsInformationAPI.Domain;
 using PaymentsInformationAPI.Repositories.Interfaces;
 using PaymentsInformationAPI.Services.Interfaces;
+using System;
 
 namespace PaymentsInformationAPI.Services
 {
     public class TransactionService : ITransactionService
     {
-        [Inject]
-        public ITaxRepository TaxRepository { get; set; }
+        private readonly ITransactionRepository TransactionRepository;
+
+        public TransactionService(ITransactionRepository transactionRepository)
+        {
+            TransactionRepository = transactionRepository;
+        }
 
         public TransactionResponse Create(TransactionRequest newTransaction)
         {
-            //var taxa = TaxRepository.GetByAdquirente(newTransaction.Adquirente);
-
-            throw new System.NotImplementedException();
+            try
+            {
+                var transaction = TransactionRepository.Create(newTransaction);
+                return transaction;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

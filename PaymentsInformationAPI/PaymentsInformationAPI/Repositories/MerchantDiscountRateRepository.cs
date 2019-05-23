@@ -1,32 +1,54 @@
-﻿using PaymentsInformationAPI.Domain;
+﻿using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
+using PaymentsInformationAPI.Domain;
 using PaymentsInformationAPI.Repositories.Interfaces;
+using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 namespace PaymentsInformationAPI.Repositories
 {
     public class MerchantDiscountRateRepository : IMerchantDiscountRateRepository
     {
-        public MerchantDiscountRate Get()
+        private readonly IConfiguration configuration;
+
+        public MerchantDiscountRateRepository(IConfiguration _configuration)
         {
-            return new MerchantDiscountRate()
+            configuration = _configuration;
+        }
+
+        public IList<MerchantDiscountRate> Get()
+        {
+            try
             {
-                Adquirente = "Adquirente A",
-                Taxas = new List<Tax>()
+                using (var reader = new StreamReader(configuration.GetSection("MDR_Path").Value))
                 {
-                    new Tax()
-                    {
-                        Bandeira = Bandeira.Visa,
-                        Credito = new decimal(2.25),
-                        Debito = new decimal(2.00)
-                    },
-                    new Tax()
-                    {
-                        Bandeira = Bandeira.Mastercard,
-                        Credito = new decimal(2.35),
-                        Debito = new decimal(1.98)
-                    }
+                    var json = reader.ReadToEnd();
+                    return JsonConvert.DeserializeObject<List<MerchantDiscountRate>>(json);
                 }
-            };
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public MerchantDiscountRate GetByAdquirente(string adquirente)
+        {
+            try
+            {
+                using (var reader = new StreamReader(configuration.GetSection("MDR_Path").Value))
+                {
+                    var json = reader.ReadToEnd();
+                    var items = JsonConvert.DeserializeObject<List<MerchantDiscountRate>>(json);
+                    return items.SingleOrDefault(i => i.Adquirente == adquirente);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }
