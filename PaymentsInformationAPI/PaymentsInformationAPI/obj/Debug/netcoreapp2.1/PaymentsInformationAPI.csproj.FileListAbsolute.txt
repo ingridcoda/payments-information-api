@@ -11,3 +11,4 @@ C:\Users\Ingrid Coda\Desktop\Desafio\payments-information-api\PaymentsInformatio
 C:\Users\Ingrid Coda\Desktop\Desafio\payments-information-api\PaymentsInformationAPI\PaymentsInformationAPI\obj\Debug\netcoreapp2.1\PaymentsInformationAPI.RazorTargetAssemblyInfo.cache
 C:\Users\Ingrid Coda\Desktop\Desafio\payments-information-api\PaymentsInformationAPI\PaymentsInformationAPI\obj\Debug\netcoreapp2.1\PaymentsInformationAPI.dll
 C:\Users\Ingrid Coda\Desktop\Desafio\payments-information-api\PaymentsInformationAPI\PaymentsInformationAPI\obj\Debug\netcoreapp2.1\PaymentsInformationAPI.pdb
+C:\Users\Ingrid Coda\Desktop\Desafio\payments-information-api\PaymentsInformationAPI\PaymentsInformationAPI\obj\Debug\netcoreapp2.1\PaymentsInformationAPI.csprojAssemblyReference.cache
