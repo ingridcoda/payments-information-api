@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PaymentsInformationAPI.Domain;
 using PaymentsInformationAPI.Services.Interfaces;
+using System;
 
 namespace PaymentsInformationAPI.Controllers
 {
@@ -18,13 +19,20 @@ namespace PaymentsInformationAPI.Controllers
         [HttpPost]
         public IActionResult Create([FromBody] TransactionRequest newTransaction)
         {
-            if (ModelState.IsValid)
+            try
             {
-                var transaction = TransactionService.Create(newTransaction);
-                return Ok(transaction);
-            }
+                if (ModelState.IsValid)
+                {
+                    var transaction = TransactionService.Create(newTransaction);
+                    return Ok(transaction);
+                }
 
-            return BadRequest("Parâmetros inválidos. Tente novamente.");
+                return BadRequest("Parâmetros inválidos. Tente novamente.");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

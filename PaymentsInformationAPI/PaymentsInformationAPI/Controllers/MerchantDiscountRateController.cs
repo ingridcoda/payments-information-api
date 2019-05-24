@@ -1,6 +1,6 @@
-﻿using System.Net.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using PaymentsInformationAPI.Services.Interfaces;
+using System;
 
 namespace PaymentsInformationAPI.Controllers
 {
@@ -18,14 +18,21 @@ namespace PaymentsInformationAPI.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            if (ModelState.IsValid)
+            try
             {
-                var mdr = MerchantDiscountRateService.Get();
-                if (mdr == null) return NotFound();
-                return Ok(mdr);
-            }
+                if (ModelState.IsValid)
+                {
+                    var mdr = MerchantDiscountRateService.Get();
+                    if (mdr == null) return NotFound();
+                    return Ok(mdr);
+                }
 
-            return BadRequest("Parâmetro inválido. Tente novamente.");
+                return BadRequest("Parâmetro inválido. Tente novamente.");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

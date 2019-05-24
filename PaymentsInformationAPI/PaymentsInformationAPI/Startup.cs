@@ -31,6 +31,7 @@ namespace PaymentsInformationAPI
                 options.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
                 options.SerializerSettings.Formatting = Formatting.Indented;
             });
+
             services.AddTransient<IMerchantDiscountRateService, MerchantDiscountRateService>();
             services.AddTransient<ITransactionService, TransactionService>();
             services.AddTransient<IMerchantDiscountRateRepository, MerchantDiscountRateRepository>();
