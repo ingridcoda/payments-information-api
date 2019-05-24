@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "b3b9cebe2cb25de9fba6e4bb3e72c03ed12add4d"
+    "signature": "1545034c0caf29eb9183125d646280f9ba4e7e30"
   },
   "compilationOptions": {
     "defines": [
@@ -24,10 +24,6 @@
     ".NETCoreApp,Version=v2.1": {
       "PaymentsInformationAPI/1.0.0": {
         "dependencies": {
-          "AutoMapper": "8.1.0",
-          "AutoMapper.Attributes": "6.0.1",
-          "LightInject": "5.5.0",
-          "LightInject.Annotation": "1.1.0",
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.AspNetCore.Razor.Design": "2.1.2",
           "Microsoft.NETCore.App": "2.1.0",
@@ -39,64 +35,6 @@
         },
         "compile": {
           "PaymentsInformationAPI.dll": {}
-        }
-      },
-      "AutoMapper/8.1.0": {
-        "dependencies": {
-          "Microsoft.CSharp": "4.5.0",
-          "System.Reflection.Emit": "4.3.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/AutoMapper.dll": {
-            "assemblyVersion": "8.1.0.0",
-            "fileVersion": "8.1.0.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/AutoMapper.dll": {}
-        }
-      },
-      "AutoMapper.Attributes/6.0.1": {
-        "dependencies": {
-          "AutoMapper": "8.1.0",
-          "System.Reflection.TypeExtensions": "4.3.0"
-        },
-        "runtime": {
-          "lib/netstandard1.3/AutoMapper.Attributes.dll": {
-            "assemblyVersion": "6.0.1.0",
-            "fileVersion": "6.0.1.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard1.3/AutoMapper.Attributes.dll": {}
-        }
-      },
-      "LightInject/5.5.0": {
-        "dependencies": {
-          "System.ValueTuple": "4.5.0"
-        },
-        "runtime": {
-          "lib/netcoreapp2.0/LightInject.dll": {
-            "assemblyVersion": "5.5.0.0",
-            "fileVersion": "5.5.0.0"
-          }
-        },
-        "compile": {
-          "lib/netcoreapp2.0/LightInject.dll": {}
-        }
-      },
-      "LightInject.Annotation/1.1.0": {
-        "dependencies": {
-          "LightInject": "5.5.0"
-        },
-        "runtime": {
-          "lib/netstandard1.3/LightInject.Annotation.dll": {
-            "assemblyVersion": "1.1.0.0",
-            "fileVersion": "1.1.0.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard1.3/LightInject.Annotation.dll": {}
         }
       },
       "Microsoft.AspNetCore.Razor.Design/2.1.2": {},
@@ -588,7 +526,6 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
-      "System.ValueTuple/4.5.0": {},
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "dependencies": {
           "Newtonsoft.Json": "12.0.2",
@@ -1832,7 +1769,7 @@
           "System.Threading.Tasks": "4.3.0",
           "System.Threading.Tasks.Parallel": "4.3.0",
           "System.Threading.Thread": "4.3.0",
-          "System.ValueTuple": "4.5.0",
+          "System.ValueTuple": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XDocument": "4.3.0",
           "System.Xml.XPath.XDocument": "4.3.0",
@@ -3413,6 +3350,14 @@
         },
         "compileOnly": true
       },
+      "System.ValueTuple/4.3.0": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0"
+        },
+        "compileOnly": true
+      },
       "System.Xml.ReaderWriter/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -3522,34 +3467,6 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
-    },
-    "AutoMapper/8.1.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Go75WXHE7p/8CtRaxZnvVEfcSh7xpE6zx9wkgN4I1BxvlzP0hoiTLHSXDYXgv9CoxaRj4ahwzCA/iwdpvyQyOA==",
-      "path": "automapper/8.1.0",
-      "hashPath": "automapper.8.1.0.nupkg.sha512"
-    },
-    "AutoMapper.Attributes/6.0.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-knJ1HsrHm4DIJiWk2SNDEpJFDWKHnFsCiJruceYpCOvm0wjcVfWffflLinex7Ct/R3fiAfJnAJx/APIroLs7qw==",
-      "path": "automapper.attributes/6.0.1",
-      "hashPath": "automapper.attributes.6.0.1.nupkg.sha512"
-    },
-    "LightInject/5.5.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Az0YTUmcZy8Dtq86uizwGHli9VjzjJ9ORp6pbFiIB9cAWrzbiMtRXnqSMLpagu4vpJqtEVOjYaxTUvMPYclJIg==",
-      "path": "lightinject/5.5.0",
-      "hashPath": "lightinject.5.5.0.nupkg.sha512"
-    },
-    "LightInject.Annotation/1.1.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-sZZpnoBRo20Ul5i8Vn8NIjIpTqhzPCwcghhQ5R36iJobmEyPjIy3qiTSVL24Ax+6aYdz/v7Vz4m/35qCVjSk3w==",
-      "path": "lightinject.annotation/1.1.0",
-      "hashPath": "lightinject.annotation.1.1.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Razor.Design/2.1.2": {
       "type": "package",
@@ -3739,13 +3656,6 @@
       "sha512": "sha512-td7x21K8LalpjTWCzW/nQboQIFbq9i0r+PCyBBCdLWWnm4NBcdN18vpz/G9hCpUaCIfRL+ZxJNVTywlNlB1aLQ==",
       "path": "system.linq.parallel/4.3.0",
       "hashPath": "system.linq.parallel.4.3.0.nupkg.sha512"
-    },
-    "System.ValueTuple/4.5.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
-      "path": "system.valuetuple/4.5.0",
-      "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "type": "package",
@@ -5573,6 +5483,13 @@
       "sha512": "sha512-OHmbT+Zz065NKII/ZHcH9XO1dEuLGI1L2k7uYss+9C1jLxTC9kTZZuzUOyXHayRk+dft9CiDf3I/QZ0t8JKyBQ==",
       "path": "system.threading.thread/4.3.0",
       "hashPath": "system.threading.thread.4.3.0.nupkg.sha512"
+    },
+    "System.ValueTuple/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cNLEvBX3d6MMQRZe3SMFNukVbitDAEpVZO17qa0/2FHxZ7Y7PpFRpr6m2615XYM/tYYYf0B+WyHNujqIw8Luwg==",
+      "path": "system.valuetuple/4.3.0",
+      "hashPath": "system.valuetuple.4.3.0.nupkg.sha512"
     },
     "System.Xml.ReaderWriter/4.3.0": {
       "type": "package",

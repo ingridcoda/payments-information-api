@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -29,6 +31,7 @@ namespace PaymentsInformationAPI
                 options.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
                 options.SerializerSettings.Formatting = Formatting.Indented;
             });
+
             services.AddTransient<IMerchantDiscountRateService, MerchantDiscountRateService>();
             services.AddTransient<ITransactionService, TransactionService>();
             services.AddTransient<IMerchantDiscountRateRepository, MerchantDiscountRateRepository>();
@@ -46,6 +49,16 @@ namespace PaymentsInformationAPI
             {
                 app.UseHsts();
             }
+
+            app.UseExceptionHandler(a => a.Run(async context =>
+            {
+                var feature = context.Features.Get<IExceptionHandlerPathFeature>();
+                var exception = feature.Error;
+
+                var result = JsonConvert.SerializeObject(new { errorMessage = exception.Message.ToString().Replace("\r\n", " ") }, Formatting.Indented);
+                context.Response.ContentType = "application/json";
+                await context.Response.WriteAsync(result);
+            }));
 
             app.UseHttpsRedirection();
             app.UseMvc();
